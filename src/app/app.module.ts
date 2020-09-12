@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ImageProcessingService } from './image-processing.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,12 @@ import { MainPageComponent } from './main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ImageProcessingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

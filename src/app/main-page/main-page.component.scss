@@ -1,0 +1,118 @@
+$background-color: #F6F6FF;
+$footer-color: #4926FB;
+$bottom-nav-color: #505096;
+$border-color: #C2C1FF;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+    height: 25vh;
+}
+
+.inner-text {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5vh;
+}
+
+.button-group {
+    margin-bottom: 5vh;
+}
+
+form {
+    margin-bottom: 5vh;
+}
+
+.btn-purple {
+    background-color: $footer-color;
+    color: $background-color;
+    border-color: $footer-color;
+}
+ 
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .open .dropdown-toggle.btn-purple {
+    background-color: #23117e;
+    border-color: #23117e;
+}
+
+.btn-outline-purple {
+    color: $footer-color;
+    border-color: $footer-color;
+}
+ 
+.btn-outline-purple:hover, .btn-outline-purple:focus, .btn-outline-purple.active, .open .dropdown-toggle.btn-outline-purple {
+    background-color: $footer-color;
+    color: $background-color;
+    border-color: $footer-color;
+}
+
+.input {
+    border-radius: 5px;
+    width: 198px;
+    border-color: #C2C1FF;
+    background-color: #F6F6FF;
+}
+
+%tag {
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.green {
+    @extend %tag;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    background-size: 100% 100%;
+    
+}
+
+.red {
+    @extend %tag;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    background-size: 100% 100%;
+}
+
+.yellow {
+    @extend %tag;
+    background-color: #FFBC40;
+    border-radius: 5px;
+    background-size: 100% 100%;
+}
+
+.tags-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.tags-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 40px;
+}
+
+/* Handle */
+.tags-list::-webkit-scrollbar-thumb {
+    background:  #FFBC40; 
+    border-radius: 40px;
+}
+
+/* Handle on hover */
+.tags-list::-webkit-scrollbar-thumb:hover {
+    background: #009eb3; 
+}
+
+.tags-list{
+    height: 50vh;
+    width: 320px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll; 
+    text-align: center;
+}
