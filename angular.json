@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "comp-vision"
+    }
+  },
+  "defaultProject": "comp-vision",
+  "cli": {
+    "analytics": "15b8aae9-dbae-4019-b487-102217c121bb"
+  }
 }

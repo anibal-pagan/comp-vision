@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+$background-color: #F6F6FF;
+$footer-color: #4926FB;
+$bottom-nav-color: #807FFD;
+$border-color: #C2C1FF;
+
+body {
+    background-color: $background-color;
+    font-family: "Nunito", sans-serif; 
+    padding-left: 100px;
+}
+
+.nav-pos {
+    margin-bottom: 40px; 
+    height: 90px;
+}
+
+.dark-background {
+    background-color: $footer-color;
+}
+
+.mid-background {
+    background-color: $bottom-nav-color;
+}
+
+.reg-text {
+    color: $footer-color;
+    font-family: "Nunito", sans-serif;  
+}
+
+.bright-text {
+    color: $background-color;
+}
+
+.bright-nav-text {
+    color: $background-color;
+    font-weight: bold;
+}
+
+.bright-nav-text:hover {    
+    color: #b4b4b4;
+}

@@ -1,0 +1,35 @@
+<table style="width: 100%;">
+    <tr>
+        <td style="vertical-align: top;">
+            <div class="col-12" style="padding-top: 10vh;">
+                <img alt="computer chip" *ngIf="!showImage" src="../../assets/comp-chip.png">
+                <img id="imageBeingUsed" [hidden]="!showImage">
+                <p class="reg-text inner-text text-center" *ngIf="!showImage">Let a computer guess what the image is!</p>
+                <p class="reg-text inner-text text-center" [hidden]="!showImage">{{imgDescription}}</p>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <form [formGroup]="chooseFromFileForm" (ngSubmit)="onAnalyzeSubmit(chooseFromFileForm.value)">
+                    <div>
+                        <label style="padding-right: 7px;">Image url:</label>
+                        <input class="input" id="urlPath" type="text" formControlName="url">
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-purple" style="width: 200px; margin-bottom: 5vh;"
+                            type="submit">Analyze!</button>
+                    </div>
+                </form>
+            </div>
+        </td>
+        <td style="padding-left: 30px;">
+            <div [hidden]="!showImage" class="tags-list overflow-auto">
+                <div *ngFor="let tag of tagsArr" class="justify-content-center">
+                    <div id="tag.name" [ngClass]="getTagColor(tag.confidence)" style="padding-left: 20px; width: 300px;">
+                        <p class="text-center" style="padding-left: 10px;">Tag: {{tag.name}}</p>
+                        <p class="text-center" style="padding-left: 10px;">Confidence:</p>
+                        <p class="text-center" style="padding-left: 10px; margin-top: -10px;">{{tag.confidence}}</p>
+                    </div>
+                </div>
+            </div>      
+        </td>
+    </tr>
+</table>
